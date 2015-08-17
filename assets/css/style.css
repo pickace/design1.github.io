@@ -246,6 +246,8 @@ input[type="text"], button {
 .ui-menu-item{ cursor:pointer; font-size:14px; padding: 4px 10px;line-height:26px; border-bottom:1px solid #cdcdcd;border-left:1px solid #cdcdcd;border-right:1px solid #cdcdcd}
 .ui-menu-item:hover{  background:#02A6D8; color:#fff}
 
+.department-detail ul:last-child li{
+	border-bottom:1px solid #cdcdcd}
 
 /*
 --------- listview page ------------*/
