@@ -243,6 +243,10 @@ input[type="text"], button {
     width: 100%;
 }
 
+.ui-autocomplete{width: 100%; text-align: left background-color: #fff; z-index:99;}
+.ui-menu-item{ cursor:pointer; font-size:14px; padding: 4px 10px;line-height:26px; border-bottom:1px solid #cdcdcd;border-left:1px solid #cdcdcd;border-right:1px solid #cdcdcd}
+.ui-menu-item:hover{  background:#02A6D8; color:#fff}
+
 
 /*
 --------- listview page ------------*/
