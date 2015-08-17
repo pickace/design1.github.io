@@ -236,6 +236,14 @@ input[type="text"], button {
 .list-view .fa {
 	font-size:28px;
 }
+
+.main-searh-section {
+    display: table;
+    padding: 20px 0;
+    width: 100%;
+}
+
+
 /*
 --------- listview page ------------*/
 
