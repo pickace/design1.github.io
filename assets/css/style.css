@@ -264,7 +264,12 @@ input[type="text"], button {
     box-shadow: none;
 }
 .main-searh-section{ background:url(../images/serch-form-bg.jpg) center top no-repeat; background-size:cover;-webkit-background-size:cover}	
-	
+
+.form-group > span{ position:relative; padding:0}
+.form-group > span .fa{ position:absolute; left:10px;}
+.home-serch-form .form-control{ padding-left:35px}	
+
+
 
 /*
 --------- listview page ------------*/
@@ -943,9 +948,9 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#51558A', end
 	.main-searh-section{ margin-top:0}
 	.headerRight .container-fluid .navbar-collapse{ background:#f2f2f2}
 	.form-group > span{ float:none; display:table; margin:25px auto;}
-	.custome-btn{ width:342px;}
-	.home-serch-form .form-control{ width:307px !important}
-	.form-control.serch-input{width:300px !important}
+	.custome-btn{ width:320px;}
+	.home-serch-form .form-control{ width:320px !important}
+	.form-control.serch-input{width:320px !important}
 	
 	}
 
@@ -953,11 +958,10 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#51558A', end
 
 
 @media (max-width: 479px) {
-	.home-serch-form .form-control{ width:227px !important}
-	.form-control.serch-input{width:220px !important}
-	.custome-btn{ width:262px;}
+	.home-serch-form .form-control{ width:240px !important}
+	.form-control.serch-input{width:240px !important}
+	.custome-btn{ width:240px;}
 	}
-
 
 
 
