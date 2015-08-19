@@ -51,7 +51,8 @@ ul li a:hover {
 .logo {
 	float:left;
 	font-size:40px;
-	font-weight:900
+	font-weight:900;
+	padding:0 35px;
 }
 .headerRight {
 	float:right
@@ -86,6 +87,12 @@ ul li a:hover {
 	display:block;
 	color:#7c8f99
 }
+
+.ui-widget-content{text-indent:30px;}
+.ui-widget-content li.ui-menu-item,.ui-widget-content li.ui-menu-item:focus {background: #fff;}
+.ui-widget-content li.ui-menu-item:hover {background: #fff;}
+
+
 /*
 ---------index------------*/
 .vedio-section {
