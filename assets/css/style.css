@@ -260,6 +260,8 @@ input[type="text"], button {
 	
 
 .headerRight .menu li{ padding:0 20px;}
+
+
 .headerRight nav {
     background: none;
     box-shadow: none;
@@ -873,13 +875,13 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#51558A', end
 	padding-top:20px;
 }
 .footer h3 {
-	font-size:16px;
+	font-size:20px;
 	color:#424242;
 	font-family: 'Raleway', sans-serif;
 	margin:0 0 12px;
 }
 .footer li, .copyright {
-	font-size:12px;
+	font-size:13px;
 	color:#b0b0b0;
 	padding:3px 0;
 	line-height:1.2;
@@ -893,7 +895,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#51558A', end
 }
 .footer li a {
 	text-decoration:none;
-	color:#b0b0b0;
+	color:#000;
 }
 .copyright {
 	line-height:35px;
@@ -939,6 +941,8 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#51558A', end
 
 
 @media (max-width: 767px) {
+	.headerRight .menu li a{ color:#fff;}
+.headerRight .menu li a:hover{ color:#000;}
 	.home-serch-form{ margin-left:0; margin-right:0}
 	.header{ padding-bottom:0;}
 	.headerRight{ float:none}
