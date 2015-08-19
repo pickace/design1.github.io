@@ -37,8 +37,9 @@ ul, li {
 	padding:0;
 	list-style:none
 }
+ul li a{color:#000;}
 ul li a:hover {
-	color:#000;
+	color:#222;
 	text-decoration:none
 }
 /*
@@ -85,12 +86,20 @@ ul li a:hover {
 .menu li a {
 	line-height:32px;
 	display:block;
-	color:#7c8f99
+	color:#000
 }
 
 .ui-widget-content{text-indent:30px;}
-.ui-widget-content li.ui-menu-item,.ui-widget-content li.ui-menu-item:focus {background: #fff;}
-.ui-widget-content li.ui-menu-item:hover {background: #fff;}
+.ui-widget-content li.ui-menu-item{background: #fff;
+	    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 0;
+    line-height: 26px;
+    border-bottom: 1px solid #cdcdcd;
+    border-left: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+}
+.ui-widget-content li.ui-menu-item:hover {background: #02a6d8;}
 
 
 /*
