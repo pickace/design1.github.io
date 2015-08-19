@@ -91,6 +91,7 @@ ul li a:hover {
 
 .ui-widget-content{text-indent:30px;}
 .ui-widget-content li.ui-menu-item{background: #fff;
+    font-family: 'Raleway', sans-serif;
 	    cursor: pointer;
     font-size: 14px;
     padding: 4px 0;
@@ -98,8 +99,9 @@ ul li a:hover {
     border-bottom: 1px solid #cdcdcd;
     border-left: 1px solid #cdcdcd;
     border-right: 1px solid #cdcdcd;
+    color:#000
 }
-.ui-widget-content li.ui-menu-item:hover {background: #02a6d8;}
+.ui-widget-content li.ui-menu-item:hover {background: #02a6d8; color:#fff;}
 
 
 /*
