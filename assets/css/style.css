@@ -116,6 +116,8 @@ h3 {
 .department-detail ul {
 	overflow:hidden;
 	text-align:center;
+	display:table;
+	width:100%;
 }
 .department-detail li {
 	line-height:22px;
@@ -124,12 +126,11 @@ h3 {
 	color:#7c8f99;
 	font-weight:400;
 	display:table-cell;
-	width:150px;
-	max-width:100%;
+	min-width:35px;
 	border-top:1px solid #cdcdcd;
 	border-left:1px solid #cdcdcd;
 	word-break: break-all;
-	padding:8px 0;
+	padding:8px 5px;
 }
 .department-detail li:last-child {
 	border-right:1px solid #cdcdcd
