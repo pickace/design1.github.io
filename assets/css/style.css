@@ -143,21 +143,18 @@ h3 {
 	text-transform:capitalize;
 	color:#7c8f99;
 	font-weight:400;
-	display:table-cell;
 	min-width:35px;
-	border-top:1px solid #cdcdcd;
-	border-left:1px solid #cdcdcd;
-	word-break: break-all;
+	float:left;
 	padding:8px 5px;
+	box-shadow: 3px 5px 18px rgba(0,0,0,0.4);
+	background:#e2e8ea;
 }
-.department-detail li:last-child {
-	border-right:1px solid #cdcdcd
+.department-detail li:nth-child(odd) {
+  
+	background:#e2e8ea;
 }
-.border-bot li {
-	border-bottom:1px solid #cdcdcd
-}
-.border-top li {
-	border-top:none
+.department-detail li:nth-child(even) {
+  background:#dde4e7;
 }
 .department-detail a {
 	font-size:100%;
