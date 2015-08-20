@@ -740,6 +740,12 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#51558A', end
 	border-top:1px solid #e6e6e6;
 }
 
+.pagination li {
+     padding: 5px;
+    font-size: 16px;
+}
+
+
 /*
 -----------------listdetail page----------------*/
 .infopage{ margin-top:60px}
