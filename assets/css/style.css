@@ -138,17 +138,21 @@ h3 {
 	width:100%;
 }
 .department-detail li {
-	line-height:22px;
+	line-height:25px;
 	font-size:17px;
 	text-transform:capitalize;
-	color:#7c8f99;
+	color:#000;
 	font-weight:400;
 	min-width:35px;
 	float:left;
-	padding:8px 5px;
-	box-shadow: 3px 5px 18px rgba(0,0,0,0.4);
+	padding:8px 20px;
 	background:#e2e8ea;
+	    margin: 2px;
+	
 }
+
+.department-detail li a{color:#000;}
+
 .department-detail li:nth-child(odd) {
   
 	background:#e2e8ea;
@@ -159,13 +163,14 @@ h3 {
 .department-detail a {
 	font-size:100%;
 	text-transform:capitalize;
-	color:#7c8f99;
+	color:#000;
 	font-weight:400;
 	display:block;
-	line-height:32px;
-	padding:5px;
-	word-break: break-all;
+
 }
+
+
+
 .view-all {
 }
 .view-all a {
@@ -271,8 +276,6 @@ input[type="text"], button {
 .ui-menu-item{ cursor:pointer; font-size:14px; padding: 4px 10px;line-height:26px; border-bottom:1px solid #cdcdcd;border-left:1px solid #cdcdcd;border-right:1px solid #cdcdcd}
 .ui-menu-item:hover{  background:#02A6D8; color:#fff}
 
-.department-detail ul:last-child li{
-	border-bottom:1px solid #cdcdcd}
 	
 
 .headerRight .menu li{ padding:0 20px;}
