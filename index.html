@@ -17,9 +17,12 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
 <body ng-controller="homeCtrl">
-    <div class="wrapper">
-        <header class="header">
+
+<!--header goes here-->
+      <header class="header">
+ <div class="wrapper">       
 <div class="logo">
     <a href="/">pickace.com</a>
 </div>
@@ -49,13 +52,14 @@
         </div><!--/.container-fluid -->
       </nav>
     </div>
+    </div>    
         </header>
-         </div>
+ <!--header goes here end-->    
          
-        <!--content section-->
-     <div class="main-searh-section">
+ <!--content section-->
 
-  <!--content section-->
+<div class="main-searh-section">
+ <div class="wrapper">
   <div class="container">
             <div class="row">
             
@@ -77,13 +81,10 @@
                 </form>
             
             </div>
-                
-            
-            </div>
- 
     </div>
- 
-    <div class="wrapper">
+    </div>
+</div>
+<div class="wrapper spacerbottom">
    <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -123,11 +124,14 @@
             </div>
         </div>
  </div>
-  <div class="wrapper">
+<!--content section end--> 
+
+ <!--footer goes here-->
         <footer class="footer">
+        <div class="wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-xs-6 col-sm-3">
                         <h3>Know us</h3>
                         <ul>
                             <li><a href="#">About us</a></li>
@@ -139,15 +143,15 @@
                         </ul>
                     </div>
 
-                    <div class="col-sm-3">
+                    <div class=" col-xs-6 col-sm-3">
                         <h3>Support</h3>
                         <ul>
                             <li><a href="#">FAQ</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
-
-                    <div class="col-sm-3">
+<div class="clearfix visible-xs-block"></div>
+                    <div class="col-xs-6 col-sm-3">
                         <h3>Business with us.</h3>
                         <ul>
                             <li><a href="#">Start Business</a></li>
@@ -155,7 +159,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-sm-3">
+                    <div class="col-xs-6 col-sm-3">
                         <h3>More</h3>
                         <ul>
                             <li><a href="#">Copyright Policy</a></li>
@@ -166,8 +170,6 @@
 
                 </div>
             </div>
-
-
             <div class="container spacerTop">
                 <div class="row">
                     <div class="col-sm-9">
@@ -189,10 +191,9 @@
 
                 </div>
             </div>
-
-
+        </div>
         </footer>
-    </div>
+ <!--footer goes here end-->
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
@@ -248,17 +249,6 @@ var aceApp = angular.module('aceApp', []);
            
     });
 </script>
-
-
-<script>
-var height_1=parseInt($(window).outerHeight());
-var height_2=parseInt($("header.header").outerHeight()+$(".main-searh-section").outerHeight());
-var height_3=parseInt(height_1-height_2);
-var main_height=parseInt(height_3/2);
-$(".main-searh-section").css("padding-top",main_height).css("padding-bottom",main_height+20);
-</script>
-
-
 
 </body>
 

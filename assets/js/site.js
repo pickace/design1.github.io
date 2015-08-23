@@ -63,12 +63,6 @@ $(document).ready(function(){
         $(this).parent().parent().find(".slots-group").slideToggle();
     });
 });
-
-
-
-
-
-
   /* service list */
      $(".more-link").click(function() {
 	
@@ -81,4 +75,10 @@ $(document).ready(function(){
 
 
 	
-	
+$(document).ready(function(){
+var height_1=parseInt($(window).outerHeight());
+var height_2=parseInt($("header.header").outerHeight()+$(".main-searh-section").outerHeight());
+var height_3=parseInt(height_1-height_2);
+var main_height=parseInt(height_3/2);
+$(".main-searh-section").css("padding-top",main_height+30).css("padding-bottom",main_height+20);
+});	
