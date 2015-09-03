@@ -1,0 +1,68 @@
+                  
+                              <div class="wrapper spacerbottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">         
+        <!--lawyers info-->
+        <div class="row lawyers-details infopage">
+          <div class="row overflow">
+            <div class="col-sm-6">
+              <div class="box-shadow">
+                <div class="row overflow brtop-change">
+                  <div class="col-xs-6 col-sm-7"> <i class="fa fa-calendar"></i> On <strong>[[ date ]]</strong>
+                    <div class="onChange"><a href="#">Change date &amp; time</a></div>
+                  </div>
+                  <div class="col-xs-6 col-sm-5"> <i class="fa fa-clock-o"></i> At <strong>[[ from_time ]]</strong> </div>
+                </div>                                                                    
+                <div class="row overflow brtop">
+                  <div class="col-xs-4 col-sm-4">
+                    <figure class="final-fig"> <img src="[[ data.image.image ]]" alt=""> </figure>
+                  </div>
+                  <div class="col-xs-8 col-sm-8">
+                    <ul class="client-detail list-space">
+                      <li><strong>[[ data.name ]]</strong></li>                                          
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row overflow backto"> <i class="fa fa-chevron-left"></i> &nbsp; <a href="#">Go back to my results</a> </div>
+            </div>
+            <div class="col-sm-6 appointment">
+              <h2>Confirm Appointment</h2>
+              <form>
+                <ul>
+                  <li>
+                    <label>Your Name<sup class="sup">*</sup></label>
+                    <input ng-model="name" type="text" placeholder="Name of the Visitor" id="id_name"/>
+                  </li>
+                  <li>
+                    <label>Reason<sup class="sup">*</sup></label>
+                    <input ng-model="reason" type="text" placeholder="Appointment Reason" id="id_reason" />
+                  </li>
+                  <li>
+                    <div class="info-step"> We will send you an SMS and email with the appointment details. </div>
+                  </li>
+                  <li>
+                    <label>Email</label>
+                    <input ng-model="email" type="text" placeholder="Email" id="id_email"/>
+                  </li>
+                  <li>
+                    <label>Mobile<sup class="sup">*</sup></label>
+                    <input type="text" ng-model="mobile" placeholder="+91" id='id_mobile'/>
+                    <div class="smscode"> Check Mobile for OTP. </div>
+                  </li>                  
+                  <li>
+                    <input type="submit" value="Submit" ng-click="user_details_submit()" />
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--lawyers info end--> 
+        
+      </div>
+    </div>
+  </div>
+ 
+</div>

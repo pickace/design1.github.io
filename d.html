@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<title>Demo</title>
+<!-- google fonts font-family: 'Raleway', sans-serif; -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<!-- font-awesome -->
+<link href="static/assets/css/font-awesome.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="static/assets/css/bootstrap.css" rel="stylesheet">
+<link href="static/assets/css/bootstrap-theme.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="static/assets/css/style.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body ng-app="aceDetail">
+
+<!--header goes here-->
+
+<header class="header">
+<div class="wrapper">
+<div class="logo">
+<a href="/">legalisor.com</a>
+</div>
+
+<div class="headerRight">
+
+<nav class="navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="menu">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+</div>
+<!--/.nav-collapse -->
+</div>
+<!--/.container-fluid -->
+</nav>
+</div>
+</div>
+</header>
+<!--header goes here end-->
+
+<!--content section-->
+<div class="wrapper spacerbottom" class="container" ng-controller="detailController">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+
+<!--lawyers info-->
+<div class="row lawyers-details infopage">
+<div class="row overflow">
+<div class="col-sm-2">
+<figure class="client-fig"><img src="[[ data.image.image ]]" alt=""></figure>
+</div>
+<div class="col-sm-10">
+<ul class="client-detail list-space">
+<li>[[ data.name ]]</li>
+<li> <strong>[[ data.designation ]]</strong>
+<br/> Prosthodontist, Dentist , [[ data.total_experience ]] Years Experience </li>
+<li>
+<p>
+    [[ data.description ]]
+</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12 clearfix">
+<div class="tabbable-panel">
+<div class="tabbable-line">
+    <ul class="nav nav-tabs ">
+        <li class="active"> <a href="#tab_default_1" data-toggle="tab"> Info </a> </li>
+        <li> <a href="#tab_default_2" data-toggle="tab"> Reviews </a> </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab_default_1">
+            <div class="col-sm-12 clearfix">
+                <ul class="client-detail list-space">
+                    <li><i class="fa fa-inr"></i> [[ data.fees ]] INR</li>                    
+                    <li><i class="fa "></i> [[ data.recommendations ]] Recommendation</li>                    
+                    <li><i class="fa "></i> [[ data.recommendations ]] year of experience.</li>                    
+                </ul>                
+                <a  ng-click="get_timeSlots()" class="btn btn-block btn-social btn-twitter bookBtn"> <i class="fa fa-clock-o"></i>BOOK NOW </a>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2">&nbsp;</div>
+                <div class="col-sm-10">
+                    <div class="slots-group">
+                      <div class="notch"></div>
+
+<!--list-1 carousel-->
+<div id="listCarousel-6" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+
+<a class="day-switcher prev" href="#listCarousel-6" role="button" data-slide="prev">
+ 
+
+
+<i class="fa fa-arrow-left"></i>&nbsp;PREV DAY</a>
+<!--pre btn-->
+
+<a class="day-switcher next" href="#listCarousel-6" role="button" data-slide="next">
+ 
+
+NEXT DAY&nbsp;<i class="fa fa-arrow-right"></i></a>
+<!--next btn-->
+
+<div class="carousel-inner" role="listbox">
+ 
+ 
+ 
+<div class="item active" ng-repeat="n in time_slots track by $index">
+ <div class="day-row repeat-section" >
+<div class="day-label">
+<span class="date">[[ n.date | date:'M/d/yyyy' ]]</span>
+</div>
+<div class="day-row-cols">
+
+<div class="day-slot-timing">
+ <span>
+<a class="ui-button-text time_slot" ng-repeat="time_slot in n.slots track by $index" ng-click="select_timeSlot(n.date, time_slot.start_time, time_slot.to_time)" ng-disabled="time_slot.availablity == 1" ng-class="{'disabled-class': time_slot.availablity}">
+From [[ time_slot.start_time]] to [[ time_slot.to_time ]]</a>
+ </span>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+<!--list-end-->
+                    </div>
+                    <div class="confirm_appointment" style="display: none">
+                                     
+                              <div class="wrapper spacerbottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">         
+        <!--lawyers info-->
+        <div class="row lawyers-details infopage">
+          <div class="row overflow">
+            <div class="col-sm-6">
+              <div class="box-shadow">
+                <div class="row overflow brtop-change">
+                  <div class="col-xs-6 col-sm-7"> <i class="fa fa-calendar"></i> On <strong>[[ date ]]</strong>
+                    <div class="onChange"><a href="#">Change date &amp; time</a></div>
+                  </div>
+                  <div class="col-xs-6 col-sm-5"> <i class="fa fa-clock-o"></i> At <strong>[[ from_time ]]</strong> </div>
+                </div>                                                                    
+                <div class="row overflow brtop">
+                  <div class="col-xs-4 col-sm-4">
+                    <figure class="final-fig"> <img src="[[ data.image.image ]]" alt=""> </figure>
+                  </div>
+                  <div class="col-xs-8 col-sm-8">
+                    <ul class="client-detail list-space">
+                      <li><strong>[[ data.name ]]</strong></li>                                          
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row overflow backto"> <i class="fa fa-chevron-left"></i> &nbsp; <a href="#">Go back to my results</a> </div>
+            </div>
+            <div class="col-sm-6 appointment">
+              <h2>Confirm Appointment</h2>
+              <form>
+                <ul>
+                  <li>
+                    <label>Your Name<sup class="sup">*</sup></label>
+                    <input ng-model="name" type="text" placeholder="Name of the Visitor" id="id_name"/>
+                  </li>
+                  <li>
+                    <label>Reason<sup class="sup">*</sup></label>
+                    <input ng-model="reason" type="text" placeholder="Appointment Reason" id="id_reason" />
+                  </li>
+                  <li>
+                    <div class="info-step"> We will send you an SMS and email with the appointment details. </div>
+                  </li>
+                  <li>
+                    <label>Email</label>
+                    <input ng-model="email" type="text" placeholder="Email" id="id_email"/>
+                  </li>
+                  <li>
+                    <label>Mobile<sup class="sup">*</sup></label>
+                    <input type="text" ng-model="mobile" placeholder="+91" id='id_mobile'/>
+                    <div class="smscode"> Check Mobile for OTP. </div>
+                  </li>                  
+                  <li>
+                    <input type="submit" value="Submit" ng-click="user_details_submit()" />
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--lawyers info end--> 
+        
+      </div>
+    </div>
+  </div>
+ 
+</div>
+                    </div>
+                    <div class="submit_otp" style="display: none">
+                 <!--content section-->
+<div class="wrapper spacerbottom">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12"> 
+        
+        <!--lawyers info-->
+        <div class="row lawyers-details infopage">
+          <div class="row overflow">
+            
+            <div class="col-sm-6 appointment">            
+              <form>
+                <ul>
+                  <li>
+                    <div class="verify-mobile">
+                      <div class="code-box">
+                        <input type="text" placeholder="Enter code" ng-model="mobile_otp">
+                        <input type="submit" value="Verify" class="verify" ng-click='submit_OTP()'>
+                      </div>                                        
+                    </div>
+                  </li>
+                </ul>
+
+            </div>
+          </div>
+        </div>
+        <!--lawyers info end--> 
+        
+      </div>
+    </div>
+  </div>
+ 
+</div>
+                    </div>
+                    <div class="thank_you" style="display: none">
+      
+ <!--content section-->
+<div class="wrapper spacerbottom">
+  <div class="container bgthanks">
+    <div class="row">
+      <div class="col-sm-12"> 
+        
+        <!--lawyers info-->
+        <div class="row lawyers-details infopage">
+          <div class="row overflow">
+            <div class="appointment thanksPage">
+              <h2><i class="fa fa-thumbs-o-up"></i> Appointment Confirmed </h2>
+              <ul>
+                <li>
+                  <label>Booking ID<sup class="sup">*</sup></label>
+                  <strong class="input-value">[[ booking_id ]]</strong> </li>
+                <li>
+                  <label>Time<sup class="sup">*</sup></label>
+                  <strong class="input-value">[[ time ]]</strong> </li>                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--lawyers info end--> 
+        
+      </div>
+    </div>
+  </div>
+ </div>
+<!--content section end-->
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--area of practices-->
+<div class="col-sm-12 border_top services-list clearfix">
+<h2> <i class="fa fa-hand-o-right"></i> Area of Practices</h2>
+<ul class="client-detail list-style" ng-repeat="n in data.specializations track by $index">
+<li>[[n.name]]</li>
+</ul>
+</div>
+<!-- services -->
+<div class="col-sm-12 border_top services-list clearfix">
+<h2> <i class="fa fa-hand-o-right"></i> Services</h2>
+<ul class="client-detail list-style" ng-repeat="n in data.services track by $index">
+<li>[[n.name]]</li>
+</ul>
+</div>
+<!-- Academics -->
+<div class="col-sm-12 border_top services-list clearfix">
+<h2> <i class="fa fa-hand-o-right"></i> Academics</h2>
+<ul class="client-detail list-style" ng-repeat="n in data.academics track by $index">
+<li>[[n.name]]</li>
+</ul>
+</div>
+<!-- Membership -->
+<div class="col-sm-12 border_top services-list clearfix">
+<h2> <i class="fa fa-hand-o-right"></i> Membership</h2>
+<ul class="client-detail list-style" ng-repeat="n in data.memberships track by $index">
+<li>[[n.name]]</li>
+</ul>
+</div>
+<!-- Registrations -->
+<div class="col-sm-12 border_top services-list clearfix">
+<h2> <i class="fa fa-hand-o-right"></i> Registrations</h2>
+<ul class="client-detail list-style" ng-repeat="n in data.registrations track by $index">
+<li>[[n.name]]</li>
+</ul>
+</div>
+<!-- Experiences -->
+<div class="col-sm-12 border_top services-list clearfix">
+<h2> <i class="fa fa-hand-o-right"></i> Experiences</h2>
+<ul class="client-detail list-style" ng-repeat="n in data.experiences track by $index">
+<li>[[n.name]]</li>
+</ul>
+</div>
+<!-- Experiences -->
+<div class="col-sm-12 border_top services-list clearfix">
+<h2> <i class="fa fa-hand-o-right"></i> Languages</h2>
+<ul class="client-detail list-style" ng-repeat="n in data.languages track by $index">
+<li>[[n.name]]</li>
+</ul>
+</div>
+<!-- Experiences -->
+<div class="col-sm-12 border_top services-list clearfix">
+<h2> <i class="fa fa-hand-o-right"></i> Practice Types</h2>
+<ul class="client-detail list-style" ng-repeat="n in data.practice_type track by $index">
+<li>[[n.name]]</li>
+</ul>
+</div>
+
+</div>
+        
+        
+        <div class="tab-pane" id="tab_default_2">
+            <div class="row overflow" ng-repeat="i in data.reviews">
+                <div class="col-sm-12"> <span class="reviewer">
+<a href="#"> <i class="fa fa-male"></i>
+<strong>[[ i.reviewer_name ]]</strong> </a> </span> </div>
+                <div class="col-sm-9">
+                    <p> [[ i.message ]]</p>
+                    <small alt='ssss'>at [[ i.timestamp]] with [[ i.client_rating ]]</small> </div>
+                <div class="col-sm-3">
+                    <strong>[[ i.verified_user ]]</strong>
+                    <strong>[[ i.recommended ]]</strong>
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--lawyers info end-->
+
+
+
+</div>
+</div>
+</div>
+</div>
+<!--content section end-->
+
+<!--footer goes here-->
+<footer class="footer">
+<div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3">
+                        <h3>Know us</h3>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press Releases</a></li>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Locations</a></li>
+                        </ul>
+                    </div>
+
+                    <div class=" col-xs-6 col-sm-3">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+<div class="clearfix visible-xs-block"></div>
+                    <div class="col-xs-6 col-sm-3">
+                        <h3>Business with us.</h3>
+                        <ul>
+                            <li><a href="#">Start Business</a></li>
+                            <li><a href="#">Manage Business</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-sm-3">
+                        <h3>More</h3>
+                        <ul>
+                            <li><a href="#">Copyright Policy</a></li>
+                            <li><a href="#">Terms & conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container spacerTop">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <span class="copyright">
+&copy; 2015 legalisor.com All Rights Reserved.
+</span>
+                    </div>
+
+
+                    <div class="col-sm-3">
+                        <ul class="social-icon">
+                            <li><a href="http://facebook.com/pickace" class="fa fa-facebook">&nbsp;</a></li>
+                            <li><a href="https://twitter.com/pickace_com" class="fa fa-twitter">&nbsp;</a></li>
+                            <li><a href="" class="fa fa-google-plus">&nbsp;</a></li>
+                            <li><a href="https://www.linkedin.com/in/pickace" class="fa fa-linkedin">&nbsp;</a></li>
+                            <li><a href="https://in.pinterest.com/pickace/" class="fa fa-pinterest">&nbsp;</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</footer>
+<!--footer goes here end-->
+
+<!-- jQuery library -->
+<script src="static/assets/js/jquery.min.js"></script>
+<!-- bootStrap library -->
+<script src="static/assets/js/bootstrap.js"></script>
+<!-- Custom Js -->
+<script src="static/assets/js/site.js"></script>
+<script src="static/assets/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="static/assets/js/detail_page_script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<div class="notch"></div>
+
+<!--list-1 carousel-->
+<div id="listCarousel-6" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+
+<a class="day-switcher prev" href="#listCarousel-6" role="button" data-slide="prev">
+ 
+
+
+<i class="fa fa-arrow-left"></i>&nbsp;PREV DAY</a>
+<!--pre btn-->
+
+<a class="day-switcher next" href="#listCarousel-6" role="button" data-slide="next">
+ 
+
+NEXT DAY&nbsp;<i class="fa fa-arrow-right"></i></a>
+<!--next btn-->
+
+<div class="carousel-inner" role="listbox">
+ 
+ 
+ 
+<div class="item active" ng-repeat="n in time_slots track by $index">
+ <div class="day-row repeat-section" >
+<div class="day-label">
+<span class="date">[[ n.date | date:'M/d/yyyy' ]]</span>
+</div>
+<div class="day-row-cols">
+
+<div class="day-slot-timing">
+ <span>
+<a class="ui-button-text time_slot" ng-repeat="time_slot in n.slots track by $index" ng-click="select_timeSlot(n.date, time_slot.start_time, time_slot.to_time)" ng-disabled="time_slot.availablity == 1" ng-class="{'disabled-class': time_slot.availablity}">
+From [[ time_slot.start_time]] to [[ time_slot.to_time ]]</a>
+ </span>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+<!--list-end-->
